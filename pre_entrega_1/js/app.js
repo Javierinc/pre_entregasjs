@@ -143,10 +143,10 @@ const entryValidation = (input, maxInput) => {
 
 // Función que pide al usuario el perfil de riesgo y lo retorna validado
 let newUser = ()=>{
-    let userProfileEntry = prompt(`Ingresa el numero del fondo en el que quieres invertir: 
+    let userProfileEntry = parseInt(prompt(`Ingresa el numero del fondo en el que quieres invertir: 
     1) Conservador 
     2) Moderado  
-    3) Arriesgado`);
+    3) Arriesgado`));
     let validationProfile = entryValidation(userProfileEntry, 3);
     while(validationProfile === false) {
         userProfileEntry = parseInt(prompt(`Debes ingresar una opción válida:
